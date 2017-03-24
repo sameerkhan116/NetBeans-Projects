@@ -10,8 +10,14 @@ public class NumberOfItems {
         list.add("Ciao");
         list.add("Hello");
         System.out.println("There are this many items on the list:");
+        System.out.println(countItems(list));
         // You can remove the comment from below when the method is done
         //System.out.println(countItems(list)); 
+    }
+    
+    public static int countItems(ArrayList<String> items) {
+        int result = items.size();
+        return result;
     }
 
 }
