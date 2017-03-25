@@ -1,9 +1,17 @@
 import java.util.Scanner;
 
 public class Palindromi {
+    
+    
 
     public static boolean palindrome(String text) {
-        // write code here
+        String result = "";
+        for(int i = text.length() - 1; i >= 0; i--) {
+            result += text.charAt(i);
+        }
+        if (result.equals(text)) {
+            return true;
+        }
         return false;
     }
 
