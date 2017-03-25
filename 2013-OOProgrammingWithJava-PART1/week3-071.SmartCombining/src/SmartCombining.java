@@ -2,6 +2,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class SmartCombining {
+    
+    public static void smartCombine(ArrayList<Integer> first, ArrayList<Integer> second) {
+        for(int x : first) {
+            if(second.contains(x)) {
+                second.removeAll(Collections.singleton(x));
+            }
+        }
+        int i = 0;
+        int x = first.size() + second.size() - 2;
+        while (i < x) {
+            Collections.addAll(first, second.get(i));
+            i++;
+        }
+    }
+    
     public static void main(String[] args) {
 
         ArrayList<Integer> list1 = new ArrayList<Integer>();
@@ -11,10 +26,8 @@ public class SmartCombining {
 
         Collections.addAll(list2, 5, 10, 4, 3, 7);
 
-        // remove comment when method ready
-        //smartCombine(list1, list2);
+        smartCombine(list1, list2);
         System.out.println(list1);
-        System.out.println(list2);
     }
 
 }
