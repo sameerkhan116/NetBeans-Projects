@@ -36,21 +36,19 @@ public class MyDate {
     }
     
     public int differenceInYears(MyDate comparedDate) {
-        Calendar calendar1 = Calendar.getInstance();
-        Calendar calendar2 = Calendar.getInstance();
-        int diffinDays = 0;
-        int days;
-            calendar1.set(this.year, this.month, this.day);
-            calendar2.set(comparedDate.year, comparedDate.month, comparedDate.day);
-
-            long daysfor1 = calendar1.getTimeInMillis();
-            long daysfor2 = calendar2.getTimeInMillis();
-
-            long diffdays = Math.abs(daysfor1 - daysfor2);
-
-            diffinDays = (int) (diffdays / (24*60*60*1000));
-            
-        return (diffinDays + (Math.abs(this.year - comparedDate.year)/4)) / 365;
-    }
+        if(!this.earlier(comparedDate)) {
+            int diff = this.year - comparedDate.year;
+                if (this.month < comparedDate.month || this.month == comparedDate.month && this.day < comparedDate.day) {
+                diff--;
+                }
+                return diff;
+            } else {
+                int diff = comparedDate.year - this.year;
+                if (this.month > comparedDate.month || comparedDate.month == this.month && this.day > comparedDate.day) {
+                diff--;
+                }
+                return diff;
+            }
+        }
 
 }
