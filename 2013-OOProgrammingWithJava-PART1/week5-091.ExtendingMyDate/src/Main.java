@@ -8,5 +8,5 @@ public class Main {
     }
     System.out.println("This week's Friday is " + day);
     System.out.println("The date 790 days from this week's Friday is  " + day.afterNumberOfDays(790));
-}
+    }
 }
