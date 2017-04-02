@@ -42,13 +42,12 @@ public class MyDate {
                 diff--;
                 }
                 return diff;
-            } else {
-                int diff = comparedDate.year - this.year;
-                if (this.month > comparedDate.month || comparedDate.month == this.month && this.day > comparedDate.day) {
-                diff--;
-                }
-                return diff;
+        } else {
+            int diff = comparedDate.year - this.year;
+            if (this.month > comparedDate.month || comparedDate.month == this.month && this.day > comparedDate.day) {
+            diff--;
             }
+            return diff;
         }
-
+    }
 }
