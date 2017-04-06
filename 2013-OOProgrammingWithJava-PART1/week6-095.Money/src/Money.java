@@ -22,7 +22,27 @@ public class Money {
     public int cents() {
         return cents;
     }
+    
+    public Money plus(Money added) {
+        int a = added.euros();
+        int b = added.cents();
+        Money addition = new Money(this.euros + a, this.cents + b);
+        return addition;
+    }
+    
+    public boolean less(Money compared) {
+        return (this.euros*100 + this.cents%100) < (compared.euros() * 100 + compared.cents() % 100); 
+    }
 
+    public Money minus(Money decremented) {
+        Money subtracted = new Money(this.euros() - decremented.euros(), this.cents() - decremented.cents());
+        Money zero = new Money(0,0);
+        if(subtracted.euros() + subtracted.cents > 0) {
+            return subtracted;
+        }
+        return zero;
+    }
+    
     @Override
     public String toString() {
         String zero = "";
