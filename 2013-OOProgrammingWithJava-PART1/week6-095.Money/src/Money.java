@@ -35,12 +35,20 @@ public class Money {
     }
 
     public Money minus(Money decremented) {
-        Money subtracted = new Money(this.euros() - decremented.euros(), this.cents() - decremented.cents());
-        Money zero = new Money(0,0);
-        if(subtracted.euros() + subtracted.cents > 0) {
-            return subtracted;
+        int a = decremented.euros();
+        int b = decremented.cents();
+        Money subtracted;
+        if(this.cents - b < 0) {
+            subtracted = new Money(this.euros() - a - 1, 100 - b);
+        } else {
+            subtracted = new Money(this.euros - a, this.cents - b);
         }
-        return zero;
+        Money zero = new Money(0,0);
+        if(this.euros - decremented.euros() < 0 || (this.euros == decremented.euros() && this.cents < decremented.cents())) {
+            return zero;
+        } else {
+        return subtracted;
+        }
     }
     
     @Override
