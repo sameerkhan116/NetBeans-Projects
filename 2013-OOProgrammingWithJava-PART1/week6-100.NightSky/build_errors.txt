@@ -1,0 +1,6 @@
+
+BUILD FAILED
+/Users/sameerkhan/NetBeansProjects/2013-OOProgrammingWithJava-PART1/week6-100.NightSky/nbproject/build-impl.xml:930: The following error occurred while executing this line:
+/Users/sameerkhan/NetBeansProjects/2013-OOProgrammingWithJava-PART1/week6-100.NightSky/nbproject/build-impl.xml:270: Compile failed; see the compiler error output for details.
+
+Total time: 14 seconds
