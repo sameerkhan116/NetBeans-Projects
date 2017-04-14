@@ -1,3 +1,4 @@
+
 import java.util.HashMap;
 
 /*
@@ -17,13 +18,21 @@ public class Airplane {
         this.plane = new HashMap<String, Integer>();
     }
     
-    public void addPlane(String Id, int capacity) {
-        this.plane.put(Id, capacity);
+    public void add(String a, int b) {
+        this.plane.put(a, b);
     }
     
-    public void printPlane() {
-        for(String key : this.plane.keySet()) {
-            System.out.println(key + " (" + this.plane.get(key)+ "ppl)");
+    public String getString(String key) {
+        return key + " (" + this.plane.get(key) + " ppl)";
+    }
+    
+    @Override
+    public String toString() {
+        String buffer = "";
+        
+        for(String i : this.plane.keySet()) {
+            buffer += i + " (" + this.plane.get(i) + " ppl)\n";
         }
+        return buffer;
     }
 }

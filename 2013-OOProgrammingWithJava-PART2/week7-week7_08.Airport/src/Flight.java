@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 /*
@@ -11,14 +12,23 @@ import java.util.ArrayList;
  * @author sameerkhan
  */
 public class Flight {
-    private ArrayList<String> newFlight;
+    private ArrayList<String> flight;
     
     public Flight() {
-        this.newFlight = new ArrayList<String>();
+        this.flight = new ArrayList<String>();
     }
     
-    public void addFlight(String a, String b) {
-        this.newFlight.add("(" + a + "-" + b + ")");
+    public void addFlight(String entry) {
+        this.flight.add(entry);
     }
     
+    @Override
+    public String toString() {
+        String buffer = "";
+        
+        for(String i : this.flight) {
+            buffer += i + "\n";
+        }
+        return buffer;
+    }
 }
