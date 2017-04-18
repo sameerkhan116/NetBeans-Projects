@@ -23,10 +23,6 @@ public class Purchase {
         return this.amount * this.unitPrice;
     }
     
-    public String prod() {
-        return this.product;
-    }
-    
     public void increaseAmount() {
         this.amount += 1;
     }

@@ -16,9 +16,6 @@ import java.util.Set;
 public class Storehouse {
     private Map<String, Integer> products;
     private Map<String, Integer> stocks;
-    private String product;
-    private int price;
-    private int stock;
     
     public Storehouse() {
         this.products = new HashMap<String, Integer>();
