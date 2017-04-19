@@ -46,7 +46,7 @@ public class Jumper implements Comparable<Jumper> {
     }
     
     public void printJumpLengths() {
-        String formatted = this.jumps.toString().replace("[","").replace(","," m,").replace(""," m");
+        String formatted = this.jumps.toString().replace("[","").replace(","," m,").replace("]"," m");
         System.out.print("            jump lengths: " + formatted);
     }
 }
