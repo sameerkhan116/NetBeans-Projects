@@ -42,6 +42,6 @@ public class Box implements Thing {
     }
     
     public String toString(){
-         return this.getVolume()+" size" + this.newbox.size();
+         return this.getVolume() + " size" + this.newbox.size();
      }
 }

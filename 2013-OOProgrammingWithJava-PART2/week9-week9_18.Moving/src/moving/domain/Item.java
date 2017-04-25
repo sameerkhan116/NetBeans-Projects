@@ -9,7 +9,7 @@ package moving.domain;
  *
  * @author sameerkhan
  */
-public class Item implements Thing, Comparable<Item>{
+public class Item implements Thing, Comparable<Item> {
     private String name;
     private int volume;
     
@@ -22,18 +22,16 @@ public class Item implements Thing, Comparable<Item>{
         return this.name;
     }
     
-    @Override
     public int getVolume() {
         return this.volume;
     }
     
-    @Override
     public String toString() {
         return this.name + " (" + this.volume + " dm^3)";
     }
 
     @Override
-    public int compareTo(Item o) {
-        return this.volume - o.getVolume();
+    public int compareTo(Item comparable) {
+        return this.volume - comparable.getVolume();
     }
 }

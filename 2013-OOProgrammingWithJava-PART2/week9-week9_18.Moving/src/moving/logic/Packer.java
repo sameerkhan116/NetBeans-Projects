@@ -28,10 +28,9 @@ public class Packer {
         
         for(Thing e : things) {
             if(box.addThing(e) == true) {
-                box.addThing(e);
             } else {
                 packed.add(box);
-                e = new Box(this.boxesVolume);
+                box = new Box(this.boxesVolume);
                 box.addThing(e);
             }
         }

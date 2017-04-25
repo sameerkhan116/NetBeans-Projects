@@ -1,4 +1,5 @@
 package moving;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -23,7 +24,7 @@ public class Main {
         // we ask our packer to pack things into boxes
         List<Box> boxes = packer.packThings( things );
 
-        System.out.println("number of boxes: "+boxes.size());
+        System.out.println("number of boxes: " + boxes.size());
 
         for (Box box : boxes) {
             System.out.println("  things in the box: "+box.getVolume()+" dm^3");
