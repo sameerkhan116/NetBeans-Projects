@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author giuseppedesantis
+ * @author sameerkhan
  */
 public class Packer {
     private Box box;

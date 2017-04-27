@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author giuseppedesantis
+ * @author sameerkhan
  */
 public class Box implements Thing{
     private int maximumCapacity;
