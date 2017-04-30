@@ -20,7 +20,7 @@ public class Analysis {
         this.file = file;
     }
     
-    public int lines() throws FileNotFoundException {
+    public int lines() throws Exception {
         Scanner reader = new Scanner(this.file);
         String buffer = "";
         int i = 0;
@@ -30,5 +30,18 @@ public class Analysis {
         }
         reader.close();
         return i;
+    }
+    
+    public int characters() throws Exception {
+        Scanner reader = new Scanner(this.file);
+        String buffer = "";
+        int counter = 0;
+        while(reader.hasNext()) {
+            buffer = reader.next();
+            counter += buffer.length();
+            counter++;
+        }
+        reader.close();
+        return counter;
     }
 }
