@@ -9,7 +9,6 @@ public class Main {
         Scanner reader = new Scanner(System.in);
         Operations ops = new Operations(reader);
         ui.welcomeMessage();
-        
-        
+        ops.input();  
     }
 }
