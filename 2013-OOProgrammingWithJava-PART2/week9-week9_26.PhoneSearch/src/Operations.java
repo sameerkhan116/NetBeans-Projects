@@ -82,15 +82,62 @@ public class Operations {
     }
     
     public void searchNumber(String name, ContactBook contactBook) {
-        
+        for(Contact c : contactBook.getContacts()) {
+            if(c.getName().equalsIgnoreCase(name)) {
+                for(int i = 0; i < c.getNumber().size(); i++) {
+                    System.out.println("[" + c.getNumber().get(i) + "]");
+                }
+                return;
+            }
+        }
+        System.out.println("not found");
     }
     
     public void searchName(String number, ContactBook contactBook) {
-        
+        for(Contact c : contactBook.getContacts()) {
+            if(c.getNumber().contains(number)) {
+                System.out.println(c.getName());
+                return;
+            }
+        }
+        System.out.println("not found");
     }
     
     public void addAddress(Scanner reader, ContactBook contactBook) {
+        System.out.println("whose address: ");
+        String inputName = this.reader.nextLine();
         
+        for(Contact c : contactBook.getContacts()) {
+            if(!c.getName().equalsIgnoreCase(inputName)) {
+                System.out.println("not found");
+                return;
+            }
+        }
+        
+        System.out.println("street:");
+        String inputStreet = this.reader.nextLine();
+        
+        System.out.println("city:");
+        String inputCity = this.reader.nextLine();
+        
+        String address = inputStreet + " " + inputCity;
+        
+        List<String> addressList = new ArrayList<String>();
+        
+        for(Contact c : contactBook.getContacts()) {
+            if(c.getName().equalsIgnoreCase(inputName)) {
+                if(c.getAddress() == null) {
+                    addressList.add(address);
+                    c.addAddress(addressList);
+                    return;
+                } else {
+                    addressList = c.getAddress();
+                    addressList.add(address);
+                    c.addAddress(addressList);
+                    return;
+                }
+            }
+        }
     }
     
     public void searchNumberAndAddress(String name, ContactBook contactBook) {
