@@ -141,10 +141,28 @@ public class Operations {
     }
     
     public void searchNumberAndAddress(String name, ContactBook contactBook) {
-        
+        for(Contact c : contactBook.getContacts()) {
+            if(c.getName().equalsIgnoreCase(name)) {
+                for(int i = 0; i < c.getNumber().size(); i++) {
+                    System.out.println("[" + c.getNumber().get(i) + "]");
+                }
+                for(int i = 0; i < c.getAddress().size(); i++) {
+                    System.out.println("[" + c.getAddress().get(i) + "]");
+                }
+                return;
+            }
+            System.out.println("not found");
+        }
     }
     
     public void deleteNumberAndAddress(String name, ContactBook contactBook) {
-        
+        for(Contact c : contactBook.getContacts()) {
+            if(c.getName().equalsIgnoreCase(name)) {
+                c.getNumber().clear();
+                c.getAddress().clear();
+                return;
+            }
+            System.out.println("not found");
+        }
     }
 }
