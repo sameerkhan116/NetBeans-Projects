@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,27 +6,28 @@ import java.util.List;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author sameerkhan
+ * @author
  */
 public class ContactBook {
-    private List<Contact> contactBook;
+
+    private final List<Contact> contactBook;
     private Contact contact;
-    
+
     public ContactBook() {
         this.contactBook = new ArrayList<Contact>();
     }
-    
+
+    //this method adds contact to contactbook
     public void addContact(String name) {
-        this.contact = new Contact(name);
-        
-        if(!contactBook.contains(this.contact)) {
+        contact = new Contact(name);
+        if (!contactBook.contains(contact)) {
             this.contactBook.add(contact);
         }
     }
     
+    //this method returns all the contact
     public List<Contact> getContacts() {
         return this.contactBook;
     }

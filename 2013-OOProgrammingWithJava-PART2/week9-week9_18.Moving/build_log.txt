@@ -97,6 +97,9 @@ deps-jar:
 -compile-depend:
 
 -do-compile:
+    [javac] Compiling 1 source file to /Users/sameerkhan/NetBeansProjects/2013-OOProgrammingWithJava-PART2/week9-week9_18.Moving/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] 1 warning
 
 -post-compile:
 
@@ -115,4 +118,4 @@ compile:
 compile-test:
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 2 seconds
